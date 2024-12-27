@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=League+Spartan:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, p{
+    font-family: "League Spartan", serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 5px;
+    width: 100%;
+}
+body{
+    min-height: 100vh;
+    background-image: url(/images/background-stars.svg);
+    background-repeat: no-repeat;
+    background-size: 1010px 851px;
+    background-position: 50% 0;
+    background-color: #070724;
+}
+header{
+    width: 100%;
+    max-width: 350px;
+    padding-top: 30px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header h1{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: white;
+    opacity: 75%;
+    border-bottom: 2px solid grey;
+    transition: all ease 0.4s;
+}
+main{
+    width: 100%;
+    margin-top: 50px;
+}
+.welcome{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 15px;
+    text-align: center;
+    color: white;
+}
+p{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #65F0D5;
+}
+.tools{
+    width: 100%;
+    max-width: 300px;
+    min-height: 60px;
+    margin: 80px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.tools a{
+    width: 100%;
+}
+.tool{
+    width: 100%;
+    height: 55px;
+    border-radius: 5px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.tool img{
+    height: 22px;
+}
+.tool h1{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+    margin-bottom: -5px;
+}
+#tool1{
+    background-color: #3A4663;
+}
+#tool2{
+    background-color: #5fff72;
+}
+#tool3{
+    background-color: #985bdf;
+}
+
+@media only screen and (min-width: 720px){
+    body{
+        background-size: 1532px 1291px;
+    }
+    header{
+        max-width: 400px;
+        padding-top: 40px;
+    }
+    header h1{
+        font-size: 13px;
+    }
+    header a:hover h1{
+        opacity: 100%;
+        border-bottom: 2px solid white;
+    }
+    main{
+        margin-top: 60px;
+    }
+    .welcome{
+        font-size: 50px;
+    }
+    p{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+    .tools{
+        margin-top: 90px;
+        max-width: 350px;
+    }
+    .tool{
+        transition: all ease 0.2s;
+    }
+    .tool img{
+        height: 24px;
+    }
+    .tool h1{
+        font-size: 22px;
+        letter-spacing: 0.5px;
+    }
+    #tool1:hover{
+        background-color: #4d5b7d;
+    }
+    #tool2:hover{
+        background-color: #A4FFAF;
+    }
+    #tool3:hover{
+        background-color: #af80e5;
+    }
+}

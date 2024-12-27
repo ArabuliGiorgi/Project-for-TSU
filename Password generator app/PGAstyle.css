@@ -1,0 +1,391 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-family: "JetBrains Mono", monospace;
+}
+body{
+    background-color: #08070B;
+    padding: 0 16px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    width: 100%;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 5px;
+    width: 100%;
+}
+nav{
+    width: 100%;
+    max-width: 350px;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav h1{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 25px;
+    text-align: center;
+    color: white;
+    opacity: 75%;
+    border-bottom: 2px solid grey;
+    transition: all ease 0.4s;
+}
+.header-text{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21.12px;
+    text-align: center;
+    color: #817D92;
+}
+.password-div{
+    background-color: #24232C;
+    width: 100%;
+    height: 64px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.copy-div{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+#copy-text{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 23.76px;
+    text-align: left;
+    color: #A4FFAF;
+    display: none;
+}
+.copy-icon1{
+    width: 17.5px;
+    height: 20px;
+    color: #A4FFAF;
+    cursor: pointer;
+}
+.copy-icon{
+    width: 17.5px;
+    height: 20px;
+    color: #A4FFAF;
+    cursor: pointer;
+}
+.copy-icon:hover{
+    color: #FFFFFF;
+}
+#password{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.68px;
+    text-align: left;
+    color: #E6E5EA;
+    display: none;
+}
+.empty-password{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.68px;
+    text-align: left;
+    color: #E6E5EA;
+    opacity: 25%;
+}
+.settings{
+    background-color: #24232C;
+    width: 100%;
+    padding: 16px;
+}
+.character-length-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.length-font{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21.12px;
+    text-align: left;
+    color: #E6E5EA;
+}
+#length{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.68px;
+    text-align: left;
+    color: #A4FFAF;
+}
+#length-input{
+    width: 100%;
+    height: 8px;
+    appearance: none;
+    background: linear-gradient(to right, #A4FFAF 0%, #18171F 0%);
+    border-radius: 5px;
+    outline: none;
+    margin: 18px 0 42px 0;
+}
+#length-input::-webkit-slider-thumb{
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #E6E5EA;
+}
+#length-input::-webkit-slider-thumb:active{
+    background-color: #18171F;
+    border: 2px solid #A4FFAF;
+}
+.checks{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+.check-divs{
+    display: flex;
+    gap: 20px;
+}
+.checks-font{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21.12px;
+    text-align: left;
+    color: #E6E5EA;
+}
+.check-input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #E6E5EA;
+    cursor: pointer;
+    position: relative;
+}
+.check-input:active{
+    border: 2px solid #A4FFAF;
+}
+.check-input:checked{
+    background-color: #A4FFAF;
+    border-color: #A4FFAF;
+}
+.check-input:checked::after{
+    content: '';
+    display: block;
+    width: 15px;
+    height: 12px;
+    background-image: url(images/icon-check.svg);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#too-weak{
+    display: none;
+}
+#weak{
+    display: none;
+}
+#medium{
+    display: none;
+}
+#strong{
+    display: none;
+}
+.strength{
+    width: 100%;
+    height: 56px;
+    padding: 0 16px;
+    background-color: #18171F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.strength-font{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21.12px;
+    text-align: center;
+    color: #817D92;
+}
+.strength-level{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23.76px;
+    text-align: right;
+    color: #E6E5EA;
+}
+.strength-level-div{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.strength-rectangles{
+    display: flex;
+    height: 28px;
+    gap: 8px;
+}
+.rectangle1, .rectangle2, .rectangle3, .rectangle4{
+    width: 10px;
+    height: 100%;
+    border: 2px solid #E6E5EA;
+}
+#too-weak .rectangle1{
+    background-color: #F64A4A;
+    border-color: #F64A4A;
+}
+#weak .rectangle1, #weak .rectangle2{
+    background-color: #FB7C58;
+    border-color: #FB7C58;
+}
+#medium .rectangle1, #medium .rectangle2, #medium .rectangle3{
+    background-color: #F8CD65;
+    border-color: #F8CD65;
+}
+#strong .rectangle1, #strong .rectangle2, #strong .rectangle3, #strong .rectangle4{
+    background-color: #A4FFAF;
+    border-color: #A4FFAF;
+}
+.button{
+    background-color: #A4FFAF;
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.button h1{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21.12px;
+    text-align: center;
+    color: #24232C;
+}
+#arrow{
+    color: #24232C;
+}
+.button:hover{
+    border: 2px solid #A4FFAF;
+    background-color: #24232C;
+    cursor: pointer;
+}
+.button:hover h1{
+    color: #A4FFAF;
+}
+.button:hover #arrow{
+    color: #A4FFAF;
+}
+
+@media only screen and (min-width: 600px){
+    body{
+        padding-bottom: 30px;
+    }
+    main{
+        gap: 24px;
+    }
+    nav{
+        max-width: 400px;
+        margin-top: 40px;
+    }
+    nav h1{
+        font-size: 13px;
+    }
+    nav a:hover h1{
+        opacity: 100%;
+        border-bottom: 2px solid white;
+    }
+    .header-text{
+        font-size: 24px;
+        line-height: 31.68px;
+    }
+    .password-div{
+        height: 80px;
+        padding: 0 32px;
+    }
+    .copy-div{
+        gap: 16px;
+    }
+    #copy-text{
+        font-size: 18px;
+    }
+    .copy-icon1{
+        width: 21px;
+        height: 24px;
+    }
+    .copy-icon{
+        width: 21px;
+        height: 24px;
+    }
+    #password{
+        font-size: 32px;
+        line-height: 42.24px;
+    }
+    .empty-password{
+        font-size: 32px;
+        line-height: 42.24px;
+    }
+    .settings{
+        padding: 24px 32px 32px 32px;
+    }
+    .length-font{
+        font-size: 18px;
+        line-height: 23.76px;
+    }
+    #length{
+        font-size: 32px;
+        line-height: 42.24px;
+    }
+    #length-input{
+        margin-top: 26px;
+    }
+    .checks{
+        gap: 20px;
+    }
+    .check-divs{
+        gap: 24px;
+    }
+    .checks-font{
+        font-size: 18px;
+        line-height: 23.76px;
+    }
+    .strength{
+        height: 72px;
+        padding: 0 32px;
+        margin-bottom: 32px;
+    }
+    .strength-font{
+        font-size: 18px;
+        line-height: 23.76px;
+    }
+    .strength-level{
+        font-size: 24px;
+        line-height: 31.68px;
+    }
+    .button{
+        height: 65px;
+        gap: 24px;
+    }
+    .button h1{
+        font-size: 18px;
+        line-height: 23.76px;
+    }
+}

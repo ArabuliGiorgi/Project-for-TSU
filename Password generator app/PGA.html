@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator app</title>
+    <link rel="icon" href="images/password-strenght.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="PGAstyle.css">
+    <script defer src="PGA.js"></script>
+</head>
+<body>
+    <main>
+        <nav>
+            <a href="../index.html"><h1>Home</h1></a>
+            <a href="../ToDo App/ToDo.html"><h1>ToDo List</h1></a>
+            <a href="../Calculator App/Calculator.html"><h1>Calculator</h1></a>
+        </nav>
+        <h1 class="header-text">Password Generator</h1>
+        <div class="password-div">
+            <h1 id="password"></h1>
+            <h1 class="empty-password">P4$5W0rD!</h1>
+            <div class="copy-div">
+                <h1 id="copy-text">COPIED</h1>
+                <div class="copy-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width: 100%; height: 100%; viewBox="0 0 24 24">
+                        <path d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z" fill="currentColor"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="settings">
+            <div class="character-length-div">
+                <h1 class="length-font">Character Length</h1>
+                <h1 id="length">0</h1>
+            </div>
+            <input type="range" id="length-input" min="0" max="20" value="0">
+            <div class="checks">
+                <div class="check-divs">
+                    <input type="checkbox" id="uppercase-check" class="check-input">
+                    <h1 class="checks-font">Include Uppercase Letters</h1>
+                </div>
+                <div class="check-divs">
+                    <input type="checkbox" id="lowercase-check" class="check-input">
+                    <h1 class="checks-font">Include Lowercase Letters</h1>
+                </div>
+                <div class="check-divs">
+                    <input type="checkbox" id="numbers-check" class="check-input">
+                    <h1 class="checks-font">Include Numbers</h1>
+                </div>
+                <div class="check-divs">
+                    <input type="checkbox" id="symbols-check" class="check-input">
+                    <h1 class="checks-font">Include Symbols</h1>
+                </div>
+            </div>
+            <div class="strength" id="empty-strength">
+                <h1 class="strength-font">STRENGTH</h1>
+                <div class="strength-level-div">
+                    <div class="strength-rectangles">
+                        <div class="rectangle1"></div>
+                        <div class="rectangle2"></div>
+                        <div class="rectangle3"></div>
+                        <div class="rectangle4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="strength" id="too-weak">
+                <h1 class="strength-font">STRENGTH</h1>
+                <div class="strength-level-div">
+                    <h1 class="strength-level">TOO WEAK!</h1>
+                    <div class="strength-rectangles">
+                        <div class="rectangle1"></div>
+                        <div class="rectangle2"></div>
+                        <div class="rectangle3"></div>
+                        <div class="rectangle4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="strength" id="weak">
+                <h1 class="strength-font">STRENGTH</h1>
+                <div class="strength-level-div">
+                    <h1 class="strength-level">WEAK</h1>
+                    <div class="strength-rectangles">
+                        <div class="rectangle1"></div>
+                        <div class="rectangle2"></div>
+                        <div class="rectangle3"></div>
+                        <div class="rectangle4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="strength" id="medium">
+                <h1 class="strength-font">STRENGTH</h1>
+                <div class="strength-level-div">
+                    <h1 class="strength-level">MEDIUM</h1>
+                    <div class="strength-rectangles">
+                        <div class="rectangle1"></div>
+                        <div class="rectangle2"></div>
+                        <div class="rectangle3"></div>
+                        <div class="rectangle4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="strength" id="strong">
+                <h1 class="strength-font">STRENGTH</h1>
+                <div class="strength-level-div">
+                    <h1 class="strength-level">STRONG</h1>
+                    <div class="strength-rectangles">
+                        <div class="rectangle1"></div>
+                        <div class="rectangle2"></div>
+                        <div class="rectangle3"></div>
+                        <div class="rectangle4"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <h1>GENERATE</h1>
+                <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" id="arrow">
+                    <path fill="currentColor" d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"/>
+                </svg>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

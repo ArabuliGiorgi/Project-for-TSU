@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="ToDoStyle.css">
+    <link rel="icon" href="images/to-do-list.png">
+    <script defer src="ToDoApp.js"></script>
+</head>
+<body>
+    <main>
+        <nav>
+            <a href="../index.html"><h1>Home</h1></a>
+            <a href="../Calculator App/Calculator.html"><h1>Calculator</h1></a>
+            <a href="../Password generator app/PGA.html"><h1>Password Generator</h1></a>
+        </nav>
+        <div class="header">
+            <h1>TODO</h1>
+            <div class="theme-mode" onclick="changeTheme()"></div>
+        </div>
+        <div class="form">
+            <div class="check" onclick="handleCheckClick()"></div>
+            <input type="text" placeholder="Create a new todo…" maxlength="40" onkeydown="handleKeyDown(event)">
+        </div>
+        <div class="todos">
+            <div id="list">
+                <div class="single" data-id="1">
+                    <div class="todo">
+                        <div class="circle" onclick="handleTodoCheck(event)"></div>
+                        <h1 class="active-todo" onclick="handleTodoCheck(event)">test</h1>
+                    </div>
+                    <img src="images/icon-cross.svg" alt="cross" class="cross" onclick="eraseElement(event)">
+                </div>
+            </div>
+            <div class="todos-info">
+                <h1><span id="todos-number"></span> items left</h1>
+                <h1 id="clear" onclick="clearCompleted()">Clear Completed</h1>
+            </div>            
+        </div>
+        <div class="list-view">
+            <h1 class="active" id="all" onclick="handleViewChange('all')">All</h1>
+            <h1 class="inactive" id="active" onclick="handleViewChange('active')">Active</h1>
+            <h1 class="inactive" id="completed" onclick="handleViewChange('completed')">Completed</h1>
+        </div>
+    </main>
+</body>
+</html>
