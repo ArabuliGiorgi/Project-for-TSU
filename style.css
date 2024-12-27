@@ -15,7 +15,7 @@ a{
 }
 body{
     min-height: 100vh;
-    background-image: url(/images/background-stars.svg);
+    background-image: url(./images/background-stars.svg);
     background-repeat: no-repeat;
     background-size: 1010px 851px;
     background-position: 50% 0;
